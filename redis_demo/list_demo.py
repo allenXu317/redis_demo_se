@@ -1,5 +1,6 @@
 import redis
 from time import sleep
+import os
 
 
 
@@ -23,7 +24,7 @@ print("LRANGE listDemo 0 1000")
 test = rd.lrange(LISTNAME,0,1000)
 print(test)
 print(splash)
-sleep(10)
+os.system("pause")
 
 # LLEN 获得列表长度
 alert = "测试 LLEN 获得列表长度"
@@ -53,7 +54,7 @@ print(cmd)
 test = rd.lrange(LISTNAME,0,10000)
 print(test)
 print(splash)
-sleep(10)
+os.system("pause")
 
 # 测试 RPUSH 
 alert = "测试 RPUSH 向列表中插入 a b c d e f g"
@@ -84,7 +85,7 @@ print(cmd)
 print("弹出后的结果为:")
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 alert = "RPOP获得队列头部的元素:"
 res = rd.lrange(LISTNAME,0,10000)
@@ -102,7 +103,7 @@ print(cmd)
 print("弹出后的结果为:")
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 
 # RPOPLPUSH 测试
@@ -119,7 +120,7 @@ print(cmd)
 res = rd.lrange(LISTNAME,0,10000)
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 
 # LREM 删除元素:
@@ -136,7 +137,7 @@ print(cmd)
 res = rd.lrange(LISTNAME,0,10000)
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 # LSET 插入元素
 alert = "LSET 将value插入到key列表中索引为index的位置，超出范围或key列表为空则均返回错误"
@@ -149,7 +150,7 @@ print(cmd)
 res = rd.lrange(LISTNAME,0,10000)
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 print("列表演示完毕！")
 

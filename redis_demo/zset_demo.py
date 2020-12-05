@@ -1,5 +1,6 @@
 import redis
 from time import sleep
+import os
 
 
 rd = redis.Redis(host="localhost",port="6379",decode_responses=True)
@@ -26,7 +27,7 @@ print(cmd)
 res = rd.zcard(ZSETNAME)
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 #ZRANGE 排序   ----   score从小到大的顺序
 #ZREVRANEG  排序    ----  score从大到小的顺序
@@ -41,7 +42,7 @@ print(cmd)
 res = rd.zrange(ZSETNAME,0,-2)
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 alter = "ZREVRANGE 排序   score从小到大的顺序  显示从start 到 end的范围, end=-1代表倒数第一个,end=-2代表倒数第二个"
 print(alter)
@@ -54,7 +55,7 @@ print(cmd)
 res = rd.zrevrange(ZSETNAME,0,-2)
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 
 # ZRANK 获得排名:
@@ -65,7 +66,7 @@ print(cmd)
 res = rd.zrank(ZSETNAME,"tom")
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 
 # ZREVRANK 获得排名:
@@ -76,7 +77,7 @@ print(cmd)
 res = rd.zrevrank(ZSETNAME,"tom")
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 
 print("有序集合演示完毕！")

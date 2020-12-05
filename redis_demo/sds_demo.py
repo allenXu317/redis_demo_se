@@ -1,5 +1,6 @@
 import redis
 from time import sleep
+import os
 
 
 # 连接redis
@@ -26,7 +27,7 @@ print(cmd)
 res = rd.strlen(SETNAME)
 print("存储字符串的长度为:%d"%(res))
 print(splash)
-sleep(10)
+os.system("pause")
 
 
 
@@ -41,7 +42,7 @@ print(alter)
 res = rd.get(SETNAME)
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 
 # incr incrby
@@ -71,7 +72,7 @@ print(cmd)
 res = rd.get(SETNAME+"num")
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 # incrby 
 alter = "incrby  可以增加指定的长度"
@@ -83,7 +84,7 @@ cmd = "GET %s"%(SETNAME+"num")
 res = rd.get(SETNAME+"num")
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 #decr  decrby 
 alter = "decr decrby 也与 incr incrby 类似"
@@ -99,7 +100,7 @@ rd.decrby(SETNAME+"num",2)
 res = rd.get(SETNAME+"num")
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 
 

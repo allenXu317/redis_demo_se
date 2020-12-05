@@ -1,5 +1,6 @@
 import redis
 from time import sleep
+import os
 
 
 rd = redis.Redis(host="localhost",port="6379",decode_responses=True)
@@ -23,7 +24,8 @@ print(cmd)
 res = rd.hget(HASHTABLE,"name")
 print(res)
 print(splash)
-sleep(10)
+# os.system("pause")
+os.system("pause")
 
 
 # HEXISTS 判断一个key值是否存在于一个hash表中
@@ -39,7 +41,7 @@ print(cmd)
 res = rd.hexists(HASHTABLE,"age")
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 
 # HDEL 删除hash表中对应的k-v
@@ -53,7 +55,7 @@ print(cmd)
 res = rd.hexists(HASHTABLE,"name")
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 
 # HLEN  hash表中保存的key的数量
@@ -72,7 +74,7 @@ cmd = "HLEN %s"%(HASHTABLE)
 res = rd.hlen(HASHTABLE)
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 
 # HKEYS 获得hash表中的所有key值
@@ -89,7 +91,7 @@ print(cmd)
 res = rd.hvals(HASHTABLE)
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 
 
@@ -101,7 +103,7 @@ print(cmd)
 res = rd.hgetall(HASHTABLE)
 print(res)
 print(splash)
-sleep(10)
+os.system("pause")
 
 print("哈希表演示完毕！")
 

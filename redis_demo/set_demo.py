@@ -1,5 +1,6 @@
 import redis
 from time import sleep
+import os
 
 
 rd = redis.Redis(host="localhost",port="6379",decode_responses=True)
